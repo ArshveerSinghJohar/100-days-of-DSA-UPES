@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+// Structure for Point
+struct Point {
+    int x;
+    int y;
+};
+
+// Function to add two points
+struct Point addPoints(struct Point p1, struct Point p2) {
+    struct Point result;
+    result.x = p1.x + p2.x;
+    result.y = p1.y + p2.y;
+    return result;
+}
+
+// Function to display a point
+void display(struct Point p) {
+    printf("(%d, %d)\n", p.x, p.y);
+}
+
+int main() {
+    struct Point P1, P2, P3;
+
+    // Initialize points
+    P1.x = 10; P1.y = 20;
+    P2.x = 12; P2.y = 15;
+
+    // Add points
+    P3 = addPoints(P1, P2);
+
+    // Display result
+    display(P3);
+
+    return 0;
+}
